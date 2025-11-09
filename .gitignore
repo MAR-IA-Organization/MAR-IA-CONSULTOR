@@ -1,0 +1,40 @@
+# 🐍 Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# 🧠 Modelos y data pesados
+GPT/__pycache__/
+GPT/.venv/
+GPT/*.pt
+GPT/*.bin
+GPT/*.ckpt
+GPT/*.json
+sqlcoder_7b_2/__pycache__/
+sqlcoder_7b_2/.venv/
+sqlcoder_7b_2/*.pt
+sqlcoder_7b_2/*.bin
+sqlcoder_7b_2/*.ckpt
+sqlcoder_7b_2/memory.json
+
+# 💾 Datos y backups
+data/
+backups/
+*.tar.gz
+*.gpg
+*.bak
+*.backup
+*.log
+
+# 🔐 Secretos
+.env
+.env.*
+*.env
+packages.microsoft.gpg
+
+# ⚙️ IDE / cache
+.vscode/
+.idea/
+.cache/

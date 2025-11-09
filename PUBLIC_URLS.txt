@@ -1,0 +1,12 @@
+🌐 URLs Públicas del Sistema MAR-IA en RunPod
+
+Conector Principal: https://8zxcu40vtox2yl-8000.proxy.runpod.net
+NLG (MAR-IA):      https://8zxcu40vtox2yl-8002.proxy.runpod.net
+SQLCoder:          https://8zxcu40vtox2yl-8011.proxy.runpod.net
+
+Uso desde otro servidor:
+curl -X POST https://8zxcu40vtox2yl-8000.proxy.runpod.net/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question":"¿Cuántos compradores tengo?","lang":"es"}'
+
+Generado: Thu Nov  6 05:17:05 UTC 2025

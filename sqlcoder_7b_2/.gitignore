@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+*.pt
+*.bin
+*.ckpt
+memory.json
+*.log
