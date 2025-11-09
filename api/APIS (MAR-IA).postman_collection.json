@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "c45e0d0b-0c43-4798-b0bb-51b4e91117a0",
+		"name": "APIS (MAR-IA)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36184844",
+		"_collection_link": "https://dark-resonance-963996.postman.co/workspace/MAR-IA~b3e90f43-6f69-487c-9087-6de4e584ad4d/collection/36184844-c45e0d0b-0c43-4798-b0bb-51b4e91117a0?action=share&source=collection_link&creator=36184844"
+	},
+	"item": [
+		{
+			"name": "Questions(MAR-IA)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\":\"Muéstrame los últimos 10 pagos\",//your question\r\n    \"lang\":\"es\"//your lenguage defect\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://8zxcu40vtox2yl-8000.proxy.runpod.net/ask",
+					"protocol": "https",
+					"host": [
+						"8zxcu40vtox2yl-8000",
+						"proxy",
+						"runpod",
+						"net"
+					],
+					"path": [
+						"ask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Question(SQL-CODER)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//{\r\n//  \"question\": \"Muéstrame los últimos 10 pagos\",\r\n//  \"schema_text\": \"TABLE public.commerce_workerpayment\\n- id (bigint)\\n- amount (numeric)\\n- created_at (timestamp)\\n- note (varchar)\\n- debt_id (bigint)\\n- worker_id (bigint)\"\r\n//}\r\n\r\n\r\n//example II\r\n{\r\n  \"question\": \"Muéstrame los últimos 10 pagos con el nombre del trabajador\",\r\n  \"schema_text\": \"TABLE public.commerce_workerpayment\\n- id (bigint)\\n- amount (numeric)\\n- created_at (timestamp)\\n- note (varchar)\\n- debt_id (bigint)\\n- worker_id (bigint)\\n\\nTABLE public.commerce_worker\\n- id (bigint)\\n- full_name (varchar)\\n- document (varchar)\\n- phone (varchar)\\n- is_active (boolean)\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://8zxcu40vtox2yl-8011.proxy.runpod.net/generate_sql",
+					"protocol": "https",
+					"host": [
+						"8zxcu40vtox2yl-8011",
+						"proxy",
+						"runpod",
+						"net"
+					],
+					"path": [
+						"generate_sql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

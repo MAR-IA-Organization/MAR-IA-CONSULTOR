@@ -1,0 +1,335 @@
+databases:
+- name: agrodb
+  schemas:
+  - name: public
+    tables:
+    - name: auth_group
+      columns:
+      - name: id
+        type: integer
+      - name: name
+        type: character varying
+    - name: auth_group_permissions
+      columns:
+      - name: id
+        type: bigint
+      - name: group_id
+        type: integer
+      - name: permission_id
+        type: integer
+    - name: auth_permission
+      columns:
+      - name: id
+        type: integer
+      - name: name
+        type: character varying
+      - name: content_type_id
+        type: integer
+      - name: codename
+        type: character varying
+    - name: authtoken_token
+      columns:
+      - name: key
+        type: character varying
+      - name: created
+        type: timestamp with time zone
+      - name: user_id
+        type: bigint
+    - name: chat_chatmessage
+      columns:
+      - name: id
+        type: bigint
+      - name: role
+        type: character varying
+      - name: content
+        type: text
+      - name: created_at
+        type: timestamp with time zone
+      - name: user_id
+        type: bigint
+    - name: chat_pendingaction
+      columns:
+      - name: id
+        type: bigint
+      - name: intent_json
+        type: jsonb
+      - name: created_at
+        type: timestamp with time zone
+      - name: done
+        type: boolean
+      - name: user_id
+        type: bigint
+    - name: commerce_bid
+      columns:
+      - name: id
+        type: bigint
+      - name: price_per_kg
+        type: numeric
+      - name: created_at
+        type: timestamp with time zone
+      - name: buyer_id
+        type: bigint
+      - name: listing_id
+        type: bigint
+    - name: commerce_buyer
+      columns:
+      - name: id
+        type: bigint
+      - name: name
+        type: character varying
+      - name: email
+        type: character varying
+      - name: phone
+        type: character varying
+    - name: commerce_invoice
+      columns:
+      - name: id
+        type: bigint
+      - name: total_amount
+        type: numeric
+      - name: created_at
+        type: timestamp with time zone
+      - name: is_proforma
+        type: boolean
+      - name: buyer_id
+        type: bigint
+      - name: listing_id
+        type: bigint
+    - name: commerce_listing
+      columns:
+      - name: id
+        type: bigint
+      - name: quantity_kg
+        type: numeric
+      - name: min_price_per_kg
+        type: numeric
+      - name: is_auction
+        type: boolean
+      - name: status
+        type: character varying
+      - name: crop_id
+        type: bigint
+      - name: seller_id
+        type: bigint
+    - name: commerce_marketprice
+      columns:
+      - name: id
+        type: bigint
+      - name: crop_name
+        type: character varying
+      - name: price_per_kg
+        type: numeric
+      - name: observed_at
+        type: timestamp with time zone
+    - name: commerce_worker
+      columns:
+      - name: id
+        type: bigint
+      - name: full_name
+        type: character varying
+      - name: document
+        type: character varying
+      - name: phone
+        type: character varying
+      - name: is_active
+        type: boolean
+    - name: commerce_workerdebt
+      columns:
+      - name: id
+        type: bigint
+      - name: description
+        type: character varying
+      - name: amount
+        type: numeric
+      - name: created_at
+        type: date
+      - name: paid
+        type: boolean
+      - name: worker_id
+        type: bigint
+    - name: commerce_workerpayment
+      columns:
+      - name: id
+        type: bigint
+      - name: amount
+        type: numeric
+      - name: created_at
+        type: timestamp with time zone
+      - name: note
+        type: character varying
+      - name: debt_id
+        type: bigint
+      - name: worker_id
+        type: bigint
+    - name: django_admin_log
+      columns:
+      - name: id
+        type: integer
+      - name: action_time
+        type: timestamp with time zone
+      - name: object_id
+        type: text
+      - name: object_repr
+        type: character varying
+      - name: action_flag
+        type: smallint
+      - name: change_message
+        type: text
+      - name: content_type_id
+        type: integer
+      - name: user_id
+        type: bigint
+    - name: django_content_type
+      columns:
+      - name: id
+        type: integer
+      - name: app_label
+        type: character varying
+      - name: model
+        type: character varying
+    - name: django_migrations
+      columns:
+      - name: id
+        type: bigint
+      - name: app
+        type: character varying
+      - name: name
+        type: character varying
+      - name: applied
+        type: timestamp with time zone
+    - name: django_session
+      columns:
+      - name: session_key
+        type: character varying
+      - name: session_data
+        type: text
+      - name: expire_date
+        type: timestamp with time zone
+    - name: farm_cost
+      columns:
+      - name: id
+        type: bigint
+      - name: date
+        type: date
+      - name: category
+        type: character varying
+      - name: amount
+        type: numeric
+      - name: notes
+        type: text
+      - name: farm_id
+        type: bigint
+    - name: farm_crop
+      columns:
+      - name: id
+        type: bigint
+      - name: name
+        type: character varying
+      - name: variety
+        type: character varying
+      - name: planted_at
+        type: date
+      - name: expected_harvest_at
+        type: date
+      - name: farm_id
+        type: bigint
+    - name: farm_employee
+      columns:
+      - name: id
+        type: bigint
+      - name: full_name
+        type: character varying
+      - name: role
+        type: character varying
+      - name: daily_rate
+        type: numeric
+      - name: farm_id
+        type: bigint
+    - name: farm_farm
+      columns:
+      - name: id
+        type: bigint
+      - name: name
+        type: character varying
+      - name: location
+        type: character varying
+      - name: area_hectares
+        type: numeric
+      - name: owner_id
+        type: bigint
+    - name: farm_income
+      columns:
+      - name: id
+        type: bigint
+      - name: date
+        type: date
+      - name: source
+        type: character varying
+      - name: amount
+        type: numeric
+      - name: farm_id
+        type: bigint
+    - name: farm_production
+      columns:
+      - name: id
+        type: bigint
+      - name: date
+        type: date
+      - name: quantity_kg
+        type: numeric
+      - name: crop_id
+        type: bigint
+    - name: farm_tool
+      columns:
+      - name: id
+        type: bigint
+      - name: name
+        type: character varying
+      - name: purchase_date
+        type: date
+      - name: cost
+        type: numeric
+      - name: farm_id
+        type: bigint
+    - name: users_user
+      columns:
+      - name: id
+        type: bigint
+      - name: password
+        type: character varying
+      - name: last_login
+        type: timestamp with time zone
+      - name: is_superuser
+        type: boolean
+      - name: username
+        type: character varying
+      - name: first_name
+        type: character varying
+      - name: last_name
+        type: character varying
+      - name: email
+        type: character varying
+      - name: is_staff
+        type: boolean
+      - name: is_active
+        type: boolean
+      - name: date_joined
+        type: timestamp with time zone
+      - name: role
+        type: character varying
+    - name: users_user_groups
+      columns:
+      - name: id
+        type: bigint
+      - name: user_id
+        type: bigint
+      - name: group_id
+        type: integer
+    - name: users_user_user_permissions
+      columns:
+      - name: id
+        type: bigint
+      - name: user_id
+        type: bigint
+      - name: permission_id
+        type: integer
