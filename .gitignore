@@ -20,8 +20,6 @@ sqlcoder_7b_2/*.ckpt
 sqlcoder_7b_2/memory.json
 
 # 💾 Datos y backups
-data/
-backups/
 *.tar.gz
 *.gpg
 *.bak
@@ -29,9 +27,6 @@ backups/
 *.log
 
 # 🔐 Secretos
-.env
-.env.*
-*.env
 packages.microsoft.gpg
 
 # ⚙️ IDE / cache

@@ -1,0 +1,93 @@
+{
+  "produccion_total_kg": 10000,
+  "ingresos_total": 98175883,
+  "costos_total": 33795297,
+  "deudas_pendientes": 4234636,
+  "balance": 64380586,
+  "detalle_mensual": [
+    {
+      "mes": "2023-12",
+      "produccion_kg": 1273,
+      "ingresos": 12419388,
+      "costos": 4760310,
+      "precio_promedio_kg": 9756
+    },
+    {
+      "mes": "2024-01",
+      "produccion_kg": 571,
+      "ingresos": 5717994,
+      "costos": 1971077,
+      "precio_promedio_kg": 10014
+    },
+    {
+      "mes": "2024-02",
+      "produccion_kg": 623,
+      "ingresos": 5648741,
+      "costos": 2086587,
+      "precio_promedio_kg": 9067
+    },
+    {
+      "mes": "2024-03",
+      "produccion_kg": 131,
+      "ingresos": 1489863,
+      "costos": 477964,
+      "precio_promedio_kg": 11373
+    },
+    {
+      "mes": "2024-04",
+      "produccion_kg": 1307,
+      "ingresos": 13101368,
+      "costos": 4037417,
+      "precio_promedio_kg": 10024
+    },
+    {
+      "mes": "2024-05",
+      "produccion_kg": 1398,
+      "ingresos": 15945588,
+      "costos": 5069759,
+      "precio_promedio_kg": 11406
+    },
+    {
+      "mes": "2024-06",
+      "produccion_kg": 887,
+      "ingresos": 7638844,
+      "costos": 2852266,
+      "precio_promedio_kg": 8612
+    },
+    {
+      "mes": "2024-07",
+      "produccion_kg": 583,
+      "ingresos": 4799839,
+      "costos": 1727416,
+      "precio_promedio_kg": 8233
+    },
+    {
+      "mes": "2024-08",
+      "produccion_kg": 736,
+      "ingresos": 7709600,
+      "costos": 2961521,
+      "precio_promedio_kg": 10475
+    },
+    {
+      "mes": "2024-09",
+      "produccion_kg": 255,
+      "ingresos": 2612730,
+      "costos": 1004604,
+      "precio_promedio_kg": 10246
+    },
+    {
+      "mes": "2024-10",
+      "produccion_kg": 1091,
+      "ingresos": 11453318,
+      "costos": 3642206,
+      "precio_promedio_kg": 10498
+    },
+    {
+      "mes": "2024-11",
+      "produccion_kg": 1145,
+      "ingresos": 9638610,
+      "costos": 3204170,
+      "precio_promedio_kg": 8418
+    }
+  ]
+}
